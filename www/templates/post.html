@@ -1,0 +1,100 @@
+<ion-view view-title="{{menu.post}} Post Title...">
+    <ion-nav-buttons side="right">
+        <div ng-include="'templates/partials/header-icon.html'"></div>
+    </ion-nav-buttons>
+    <ion-content has-bouncing="true" ng-init="showReply; readMode=true">
+        <div class="list card">
+
+            <div class="item item-avatar">
+                <img src="img/user3.jpg">
+                <h2 class="white-text">Patie Ushie</h2>
+                <p>November 05, 1955</p>
+            </div>
+
+            <div class="item item-body">
+                <h2 class="card-title">What is the best way to kill a rat</h2>
+                <p>
+
+                    Hi buddies. I have been looking fo the best possible way to kill and unfortunate rat I caught under my pillow yesterday. What is the painful way to kill it.
+                </p>
+                <p>
+                    <!--                    <a href="#" class="subdued">1 Like</a>-->
+                    <a href="#" class="subdued">5 Replies</a>
+                </p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" ng-click="showReply = !showReply">
+                    <i class="icon ion-ios-compose"></i> Reply
+                </a>
+                <a class="tab-item" href="#/app/edit/1">
+                    <i class="icon ion-ios-compose-outline"></i> Edit
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-android-favorite-outline"></i> Favourite?
+                </a>
+            </div>
+
+        </div>
+
+        <div class="card" ng-show="showReply">
+            <div class="list">
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Body</span>
+                    <textarea rows="7" placeholder="Reply body"></textarea>
+                </label>
+                <button class="button button-assertive round icon ion-ios-checkmark pull-right" style="margin-right:9px; margin-bottom:9px"></button>
+                    <div style="clear:both"></div>
+            </div>
+
+        </div>
+
+        <div class=" center-text">
+            <h4 class="white-text">Replies (1)</h4>
+        </div>
+
+        <div class="list card">
+
+            <div class="item item-avatar">
+                <img src="img/user2.jpg">
+                <h2 class="white-text">Christian Nwamba</h2>
+                <p>November 05, 1955</p>
+            </div>
+
+            <div class="item item-body">
+                <h2 class="card-title">Re: What is the best way to kill a rat</h2>
+                <div ng-show="readMode">
+                    <p class="white-text">
+
+                        Hi luv. Its been a while, I 'd suggest you shove your fingers into it's eyes and pluck them out.
+                    </p>
+                    <p>
+                        <a href="#" class="subdued">5 Votes</a>
+                    </p>
+                </div>
+                <div ng-hide="readMode">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Body</span>
+                        <textarea rows="10" placeholder="Body">This is a "Facebook" styled Card. The header is created from a Thumbnail List item, the content is from a card-body consisting of an image and paragraph text. The footer consists of tabs, icons aligned left, within the card-footer.</textarea>
+                    </label>
+                    <button class="button button-assertive round icon ion-ios-checkmark pull-right" style="margin-right:9px; margin-bottom:9px"></button>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-ios-checkmark-outline"></i> is Answer?
+                </a>
+                <a class="tab-item" ng-click="readMode = !readMode">
+                    <i class="icon ion-ios-compose-outline"></i> Edit
+                </a>
+                <a class="tab-item" href="#">
+                    <i class="icon ion-ios-star-outline"></i> Vote?
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

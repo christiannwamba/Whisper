@@ -1,0 +1,60 @@
+<ion-view view-title="{{menu.search}} Search">
+    <ion-nav-buttons side="right">
+        <div ng-include="'templates/partials/header-icon.html'"></div>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="bar bar-header item-input-inset transparent">
+            <label class="item item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" placeholder="Search" class="transparent">
+            </label>
+            <button class="button button-royal button-clear" on-hold="tip('Tap to start searching with the entered text')"><span class="ion-android-send" style="color:white"></span>
+            </button>
+        </div>
+        <h4 class="center-text white-text">Posts</h4>
+        <div class="card card-hover" ng-click="go('/app/posts/1')">
+            <div class="item item-text-wrap">
+                <p class="white-text">This is a basic Card which contains an item that has wrapping text.</p>
+                <p>
+                    <a class="subdued"><span class="ion-reply-all"></span> 5 Replies</a>
+                    <a class="subdued"><span class="ion-clock"></span> Nov 25, 2016</a>
+                    <a class="subdued"><span class="ion-pin"></span> Programming</a>
+                </p>
+            </div>
+        </div>
+        <div class="card card-hover" ng-click="go('/app/posts/1')">
+            <div class="item item-text-wrap">
+                <p class="white-text">This is a basic Card which contains an item that has wrapping text. This is a basic Card which contains an item that has wrapping text.</p>
+                <p>
+                    <a class="subdued"><span class="ion-reply-all"></span> 5 Replies</a>
+                    <a class="subdued"><span class="ion-clock"></span> Nov 25, 2016</a>
+                    <a class="subdued"><span class="ion-pin"></span> Programming</a>
+                </p>
+            </div>
+        </div>
+        <h4 class="center-text white-text">Categories</h4>
+        <div class="list">
+
+            <a class="item  item-icon-right" href="#">
+                 Call Ma
+                <span class="badge badge-assertive"><span class="ion-ios-plus-empty"></span></span>
+            </a>
+
+            <a class="item  item-icon-right" href="#">
+                 Call Ma
+                <span class="badge badge-assertive"><span class="ion-ios-plus-empty"></span></span>
+            </a>
+
+            <a class="item  item-icon-right" href="#">
+                 Call Ma
+                <span class="badge badge-assertive"><span class="ion-ios-plus-empty"></span></span>
+            </a>
+
+            <a class="item  item-icon-right" href="#">
+                 Call Ma
+                <span class="badge badge-assertive"><span class="ion-ios-plus-empty"></span></span>
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>

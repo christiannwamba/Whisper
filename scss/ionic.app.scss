@@ -1,0 +1,186 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$assertive: #d31464 !default;
+$royal: #490058 !default;
+$energized: #d71c1c !default;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+/* Empty. Add your own CSS if you like */
+
+body {}
+
+//.no-trans {
+//    background: #490058 !important;
+//}
+//
+//.no-trans .item {
+//    background: #490058 !important;
+//    color: #fff !important;
+//    border: none;
+//}
+.card {
+    background: #fff;
+    border-color: transparent;
+    color: #000;
+}
+
+.item {
+    //background: #fff;
+    //    border-color: transparent;
+    //color: #000;
+    //    border-bottom-style: solid;
+    //    border-bottom-width: 1px;
+    //    border-bottom-color: rgba(227, 21, 107, 0.2);
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select {
+    //    background: transparent !important;
+    //    color: #fff !important;
+}
+
+.item-complex .item-content,
+.item-radio .item-content {
+    //    background: rgba(227, 21, 107, 0.1);
+    //    color: #fff;
+    //    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.list {
+    //    background: rgba(227, 21, 107, 0.1);
+    //    color: #fff;
+}
+
+.item .item-input {
+    //    background: transparent;
+    //    color: #fff;
+}
+
+.item-complex .item-content:active,
+.item-radio .item-content:active {
+    //    background: rgba(255, 0, 0, 0.3);
+    //    border-color: transparent;
+    //    color: #fff;
+}
+
+.input-label {
+    //    color: #fffccc
+}
+
+.scroll-content {
+    background: #fafafa !important;
+}
+
+.pull-right {
+    float: right;
+    margin-top: 10px;
+}
+
+.list>.item-body>p {
+    //    color: #fff;
+}
+
+.card-title {
+    padding-top: 5px;
+    margin-top: 0;
+    //    color: #fff;
+}
+
+.white-text {
+    //color: #000000 !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.transparent {
+    //    background: transparent !important;
+}
+
+.card-hover {
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.card-hover:hover {
+    background: rgba(255, 0, 0, 0.4);
+}
+
+.input-label {
+    //color: #ccc !important;
+}
+
+.popup-container .popup {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.avatar {
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    padding: 1px;
+    border: 1px solid #ccc;
+}
+
+.avatar > img {
+    border-radius: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.side {
+    background: darken( #490058, 5%) !important;
+}
+
+.side ion-list .list a {
+    background: transparent !important;
+    border-color: transparent;
+    color: #fff;
+}
+
+.avatar-box {
+    background: #fff;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.round{
+border-radius: 50%;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+/* Empty. Add your own CSS if you like */
+

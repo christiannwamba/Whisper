@@ -1,0 +1,66 @@
+<ion-view view-title="{{menu.create}} Create new post">
+    <ion-nav-buttons side="right">
+        <div ng-include="'templates/partials/header-icon.html'"></div>
+    </ion-nav-buttons>
+    <ion-content has-bouncing="true">
+
+        <div class="card transparent">
+            <div class="item item-text-wrap transparent">
+                <div class="list">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Title</span>
+                        <input type="text" placeholder="Title">
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Category
+                        </div>
+                        <select>
+                            <option>Blue</option>
+                            <option selected>Green</option>
+                            <option>Red</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Sub Category
+                        </div>
+                        <select>
+                            <option>Blue</option>
+                            <option selected>Green</option>
+                            <option>Red</option>
+                        </select>
+                    </label>
+
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Body</span>
+                        <textarea rows="10" placeholder="Body"></textarea>
+                    </label>
+
+                    <div class="button-bar" style="margin-top:3px">
+                        <button class="button button-icon white-text" ng-repeat="tag in tags track by $index" ng-click="removeTag($index)">{{tag}}
+
+                        </button>
+                    </div>
+
+                    <div class="bar item-input-inset transparent">
+                        <label class="item item-input-wrapper">
+                            <i class="icon ion-ios-pricetag placeholder-icon"></i>
+                            <input type="search" placeholder="Enter new tag" ng-model="tagText">
+                        </label>
+                        <button ng-click="addTag(tagText)" class="button button-royal button-clear" on-hold="tip('Tap to start searching with the entered text')"><span class="ion-plus"></span>
+                        </button>
+                    </div>
+
+                </div>
+                
+                    <button class="button button-assertive round pull-right">
+                        <span class="ion-ios-checkmark"></span>
+                    </button>
+                    <div style="clear:both"></div>
+                    
+                
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/CHRISTABEL/Documents/tuts/node-tut/bee-mobile/mobile/www/lib/ionic/js/ionic.bundle.min.js",
+        "C:/Users/CHRISTABEL/Documents/tuts/node-tut/bee-mobile/mobile/www/lib/ionic/js/ionic.js",
+        "C:/Users/CHRISTABEL/Documents/tuts/node-tut/bee-mobile/mobile/www/lib/ionic/js/ionic.min.js"
+    ]
+}

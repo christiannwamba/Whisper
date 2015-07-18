@@ -1,0 +1,38 @@
+<ion-view view-title="{{menu.categories}} Categories">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear icon ion-android-more-vertical" ng-click="openPopover($event)" on-hold="tip('Context Menus')">
+        </button>
+    </ion-nav-buttons>
+    <ion-content has-bouncing="true">
+        <div class="bar bar-header item-input-inset">
+            <label class="item item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" placeholder="Search">
+            </label>
+            <button class="button button-royal button-clear" on-hold="tip('Tap to start searching with the entered text')"><span class="ion-search" ></span></button>
+        </div>
+        <div class="list">
+
+            <a class="item  item-icon-right" href="#">
+                 Call Ma
+                <span class="badge badge-assertive"><span class="ion-ios-plus-empty"></span></span>
+            </a>
+
+            <a class="item  item-icon-right" href="#">
+                 Call Ma
+                <span class="badge badge-assertive"><span class="ion-ios-plus-empty"></span></span>
+            </a>
+
+            <a class="item  item-icon-right" href="#">
+                 Call Ma
+                <span class="badge badge-assertive"><span class="ion-ios-plus-empty"></span></span>
+            </a>
+
+            <a class="item  item-icon-right" href="#">
+                 Call Ma
+                <span class="badge badge-assertive"><span class="ion-ios-plus-empty"></span></span>
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>

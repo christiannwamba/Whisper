@@ -1,0 +1,96 @@
+<ion-view view-title="{{menu.browse}} Browse">
+    <ion-nav-buttons side="right">
+        <div ng-include="'templates/partials/header-icon.html'"></div>
+    </ion-nav-buttons>
+    <ion-content has-bouncing="true" ng-init="filter=true">
+
+        <div class="card" ng-show="filter">
+            <div class="row">
+                <div class="col col-center">
+                   <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Post title">
+                    </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-center">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Username">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Cat.
+                        </div>
+                        <select>
+                            <option>Blue</option>
+                            <option>Green</option>
+                            <option>Red</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="item item-input item-select">
+                        <div class="input-label">
+                            Tag
+                        </div>
+                        <select>
+                            <option>Blue</option>
+                            <option selected>Green</option>
+                            <option>Red</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label"><span class="ion-ios-calendar-outline"></span> Start Date</span>
+                        <input type="date" placeholder="Start date">
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label"><span class="ion-ios-calendar"></span> End Date</span>
+                        <input type="date" placeholder="End date">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button round button-assertive pull-right">
+                        <span class="ion-ios-search"></span>
+                    </button>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--        List of filtered posts-->
+        <div class="card card-hover" ng-click="go('/app/posts/1')">
+            <div class="item item-text-wrap">
+                <p class="white-text">This is a basic Card which contains an item that has wrapping text.</p>
+                <p>
+                    <a class="subdued"><span class="ion-reply-all"></span> 5 Replies</a>
+                    <a class="subdued"><span class="ion-clock"></span> Nov 25, 2016</a>
+                    <a class="subdued"><span class="ion-pin"></span> Programming</a>
+                </p>
+            </div>
+        </div>
+        <div class="card card-hover" ng-click="go('/app/posts/1')">
+            <div class="item item-text-wrap">
+                <p class="white-text">This is a basic Card which contains an item that has wrapping text. This is a basic Card which contains an item that has wrapping text.</p>
+                <p>
+                    <a class="subdued"><span class="ion-reply-all"></span> 5 Replies</a>
+                    <a class="subdued"><span class="ion-clock"></span> Nov 25, 2016</a>
+                    <a class="subdued"><span class="ion-pin"></span> Programming</a>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
