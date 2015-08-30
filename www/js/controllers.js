@@ -1,4 +1,5 @@
-angular.module('starter.controllers', [])
+var url = 'http://localhost:3000/';
+angular.module('starter.controllers', ['ngSanitize'])
 
 .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
 
@@ -47,13 +48,42 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function ($scope, $stateParams) {})
 
-.controller('CreatePostCtrl', function ($scope) {
-    $scope.tags = [];
-    $scope.addTag = function (tag) {
-        $scope.tags.push(tag);
-        $scope.tagText = '';
-    };
-    $scope.removeTag = function (tag) {
-        $scope.tags.splice(tag,1);
-    };
-});
+.controller('PostCtrl', function ($scope, $http) {
+        $http.get(url + 'posts').success(function (data) {
+            $scope.posts = data;
+        });
+    })
+    .controller('PCtrl', function ($scope, $http, $stateParams) {
+        $http.get(url + 'posts/' + $stateParams.postId).success(function (data) {
+            $scope.post = data;
+        });
+        $http.get(url + 'replies/filterByPost?postId=' + $stateParams.postId).success(function (data) {
+            $scope.replies = data;
+        });
+    })
+    .controller('CreatePostCtrl', function ($scope, $http) {
+        $scope.post = {};
+        $http.get(url + 'categories').success(function (data) {
+            $scope.cats = data;
+        });
+        $scope.getSub = function (id) {
+            $http.get(url + 'subcategories/filterwithcategory?categoryId=' + id).success(function (data) {
+                $scope.subcats = data;
+                console.log(data)
+            });
+        };
+        $scope.tags = [];
+        $scope.addTag = function (tag) {
+            $scope.tags.push(tag);
+            $scope.tagText = '';
+        };
+        $scope.removeTag = function (tag) {
+            $scope.tags.splice(tag, 1);
+        };
+        $scope.create = function () {
+            console.log($scope.post);
+            $http.post(url + 'posts', $scope.post).success(function (data) {
+                alert('a');
+            });
+        }
+    });

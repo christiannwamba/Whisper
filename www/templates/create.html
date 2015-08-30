@@ -1,4 +1,4 @@
-<ion-view view-title="{{menu.create}} Create new post">
+<ion-view view-title="{{menu.create}} Create new post" ng-controller="CreatePostCtrl">
     <ion-nav-buttons side="right">
         <div ng-include="'templates/partials/header-icon.html'"></div>
     </ion-nav-buttons>
@@ -9,32 +9,28 @@
                 <div class="list">
                     <label class="item item-input item-floating-label">
                         <span class="input-label">Title</span>
-                        <input type="text" placeholder="Title">
+                        <input type="text" placeholder="Title" ng-model="post.title">
                     </label>
                     <label class="item item-input item-select">
                         <div class="input-label">
                             Category
                         </div>
-                        <select>
-                            <option>Blue</option>
-                            <option selected>Green</option>
-                            <option>Red</option>
+                        <select ng-model="post.category" ng-change="getSub(post.category)">
+                            <option ng-repeat="c in cats" value="{{c._id}}">{{c.name}}</option>
                         </select>
                     </label>
                     <label class="item item-input item-select">
                         <div class="input-label">
                             Sub Category
                         </div>
-                        <select>
-                            <option>Blue</option>
-                            <option selected>Green</option>
-                            <option>Red</option>
+                        <select ng-model="post.subCategory" ng-disabled="!post.category">
+                            <option ng-repeat="s in subcats" value="{{s._id}}">{{s.name}}</option>
                         </select>
                     </label>
 
                     <label class="item item-input item-floating-label">
                         <span class="input-label">Body</span>
-                        <textarea rows="10" placeholder="Body"></textarea>
+                        <textarea rows="10" placeholder="Body"  ng-model="post.body"></textarea>
                     </label>
 
                     <div class="button-bar" style="margin-top:3px">
@@ -54,7 +50,7 @@
 
                 </div>
                 
-                    <button class="button button-assertive round pull-right">
+                    <button class="button button-assertive round pull-right" ng-click="create()">
                         <span class="ion-ios-checkmark"></span>
                     </button>
                     <div style="clear:both"></div>

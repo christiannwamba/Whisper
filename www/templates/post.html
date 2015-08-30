@@ -1,4 +1,4 @@
-<ion-view view-title="{{menu.post}} Post Title...">
+<ion-view view-title="{{menu.post}} {{post.title}}" ng-controller="PCtrl">
     <ion-nav-buttons side="right">
         <div ng-include="'templates/partials/header-icon.html'"></div>
     </ion-nav-buttons>
@@ -6,20 +6,17 @@
         <div class="list card">
 
             <div class="item item-avatar">
-                <img src="img/user3.jpg">
-                <h2 class="white-text">Patie Ushie</h2>
-                <p>November 05, 1955</p>
+                <img src="img/user.png">
+                <h2 class="white-text">{{post.user.displayName}}</h2>
+                <p>{{post.created | date:mediumDate}}</p>
             </div>
 
             <div class="item item-body">
-                <h2 class="card-title">What is the best way to kill a rat</h2>
-                <p>
-
-                    Hi buddies. I have been looking fo the best possible way to kill and unfortunate rat I caught under my pillow yesterday. What is the painful way to kill it.
-                </p>
+                <h2 class="card-title">{{post.title}}</h2>
+                <div ng-bind-html="post.body"></div>
                 <p>
                     <!--                    <a href="#" class="subdued">1 Like</a>-->
-                    <a href="#" class="subdued">5 Replies</a>
+                    <a href="#" class="subdued">Replies</a>
                 </p>
             </div>
 
@@ -51,23 +48,23 @@
         </div>
 
         <div class=" center-text">
-            <h4 class="white-text">Replies (1)</h4>
+            <h4 class="white-text">Replies</h4>
         </div>
 
-        <div class="list card">
+        <div class="list card" ng-repeat="r in replies">
 
             <div class="item item-avatar">
-                <img src="img/user2.jpg">
-                <h2 class="white-text">Christian Nwamba</h2>
-                <p>November 05, 1955</p>
+                <img src="img/user.png">
+                <h2 class="white-text">{{r.user.displayName}}</h2>
+                <p>{{r.created|date:mediumDate}}</p>
             </div>
 
             <div class="item item-body">
-                <h2 class="card-title">Re: What is the best way to kill a rat</h2>
+                <h2 class="card-title">Re: {{post.title}}</h2>
                 <div ng-show="readMode">
                     <p class="white-text">
-
-                        Hi luv. Its been a while, I 'd suggest you shove your fingers into it's eyes and pluck them out.
+<div ng-bind-html="r.body"></div>
+                        
                     </p>
                     <p>
                         <a href="#" class="subdued">5 Votes</a>
