@@ -1,4 +1,4 @@
-var url = 'http://localhost:3000/';
+var url = 'https://quiet-peak-6818.herokuapp.com/';
 angular.module('starter.controllers', ['ngSanitize'])
 
 .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
@@ -61,7 +61,7 @@ angular.module('starter.controllers', ['ngSanitize'])
             $scope.replies = data;
         });
     })
-    .controller('CreatePostCtrl', function ($scope, $http) {
+    .controller('CreatePostCtrl', function ($scope, $http, $state) {
         $scope.post = {};
         $http.get(url + 'categories').success(function (data) {
             $scope.cats = data;
@@ -83,7 +83,7 @@ angular.module('starter.controllers', ['ngSanitize'])
         $scope.create = function () {
             console.log($scope.post);
             $http.post(url + 'posts', $scope.post).success(function (data) {
-                alert('a');
+                $state.go('app.main');
             });
         }
     });
